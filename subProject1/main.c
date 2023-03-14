@@ -14,6 +14,6 @@ if (i % k == 0) break;
 if (k == i)
 result += k;
 }
-printf("1부터 100까지 소수의 합 = %d\n ",result);
+printf(" %d\n ",result);
 system("pause");
 }
