@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+double factorial_iter(int n) {
+    double result = 1.0;
+    for (int i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+double factorial_rec(int n) {
+    if (n == 0) {
+        return 1.0;
+    }
+    else {
+        return (double)n * factorial_rec(n - 1);
+    }
+}
+
+int main() {
+    int n = 20;
+    double result_iter = factorial_iter(n);
+    double result_rec = factorial_rec(n);
+    printf("iterative factorial result: %.0lf\n", result_iter);
+    printf("recursive factorial result: %.0lf\n", result_rec);
+    return 0;
+}
